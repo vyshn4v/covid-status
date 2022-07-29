@@ -1,0 +1,28 @@
+@import "../../common/colors.scss";
+.loading {
+  color: white;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94.7vh;
+  font-size: 50px;
+}
+.loader {
+  border: 5px solid white;
+  border-top: 5px solid $primary-color;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

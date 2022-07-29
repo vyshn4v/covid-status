@@ -1,0 +1,77 @@
+@import "../../common/colors.scss";
+.districtwise {
+  background-color: $primary-color;
+  font-size: 20px;
+  padding: 20px 0 0 20px;
+  margin-top: 40px;
+  text-align: center;
+  color: white;
+  display: flex;
+  .green {
+    background-color: green;
+    width: max-content;
+    box-shadow: $box-shadow;
+    margin: 4px;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  .red {
+    background-color: #890000;
+    width: max-content;
+    box-shadow: $box-shadow;
+    margin: 4px;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  .yellow {
+    background-color: #ebeb00;
+    color: rgb(0, 0, 0);
+    width: max-content;
+    box-shadow: $box-shadow;
+    margin: 4px;
+    border-radius: 4px;
+    padding: 4px;
+  }
+}
+.district-details {
+  // width: 100%;
+  padding: 30px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto auto;
+  color: black;
+  background-color: $primary-color;
+  min-height: 94.7vh;
+  justify-content: space-evenly;
+}
+.district-status-box {
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+  min-height: 12em;
+  height: min-content;
+  box-shadow: $box-shadow;
+}
+@media (max-width: 1625px) {
+  .district-details {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+@media (max-width: 1258px) {
+  .district-details {
+    grid-template-columns: auto auto auto;
+  }
+}
+@media (max-width: 961px) {
+  .district-details {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 670px) {
+  .district-details {
+    grid-template-columns: auto;
+  }
+  .districtwise {
+    flex-direction: column;
+  }
+}

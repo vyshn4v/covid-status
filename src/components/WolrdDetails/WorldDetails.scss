@@ -1,0 +1,59 @@
+@import "../../common/colors.scss";
+//global
+.global{
+  background-color: $primary-color;
+  height: 95.8vh;
+}
+//search bar style
+.search {
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  background-color: $primary-color;
+}
+//country category dropdown
+.country-dropdown {
+  display: inline-block;
+}
+.country-dropdown-list {
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  color: $text-color;
+  background-color: $primary-color;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+  cursor: pointer;
+  border-color: $text-color;
+}
+//country name style
+.country {
+  padding: 5px;
+}
+.country-dropdown:hover .country-dropdown-list {
+  display: grid;
+}
+
+//total covid details drop down
+
+.total-covid-status {
+  display: block;
+}
+.total-dropdown-button {
+  margin: 0 10px 10px 10px;
+  height: 40px;
+  width: 70px;
+}
+.global-table-body {
+  border: 1px solid white;
+  position: absolute;
+  left: 50px;
+  display: none;
+  padding: 10px;
+  color: $text-color;
+  background-color: $primary-color;
+}
+.global-table-data{
+  padding: 10px;
+}
+.total-covid-status:hover .global-table-body {
+  display: grid;
+}

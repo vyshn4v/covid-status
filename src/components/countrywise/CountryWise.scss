@@ -1,0 +1,58 @@
+@import "../../common/colors.scss";
+.country-details {
+  color: $text-color;
+  background-color: $primary-color;
+  padding: 20px;
+  border: 1px solid $text-color;
+}
+.country-table {
+  width: 100%;
+}
+.country-table-body {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+}
+.country-table-data {
+  td {
+    font-weight: 600;
+  }
+}
+.country-table-image {
+  grid-row: 1/3;
+  img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 1625px) {
+  .country-table-body {
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+}
+@media (max-width: 1460px) {
+  .country-table-body {
+    grid-template-columns: auto auto auto auto auto;
+    // grid-template: auto auto auto auto auto ;
+  }
+}
+@media (max-width: 1100px) {
+  .country-table-body {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+@media (max-width: 748px) {
+  .country-table-body {
+    grid-template-columns: auto auto auto;
+  }
+  .country-table-image {
+    grid-row: 1/4;
+  }
+}
+@media (max-width: 530px) {
+  .country-table-body {
+    grid-template-columns: auto auto ;
+  }
+  .country-table-image {
+    grid-row: 1/7;
+  }
+}
