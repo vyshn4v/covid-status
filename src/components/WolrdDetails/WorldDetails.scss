@@ -1,15 +1,15 @@
 @import "../../common/colors.scss";
 //global
-.global{
-  background-color: $primary-color;
-  height: 95.8vh;
+.global {
+  background: $primary-color;
+  height: 100vh;
+  overflow-y: scroll;
 }
 //search bar style
 .search {
   margin-top: 40px;
   padding-top: 20px;
   display: flex;
-  background-color: $primary-color;
 }
 //country category dropdown
 .country-dropdown {
@@ -19,7 +19,7 @@
   margin: 0 10px 10px 10px;
   padding: 10px;
   color: $text-color;
-  background-color: $primary-color;
+  @include box-color;
   grid-template-columns: auto auto auto auto auto auto auto auto;
   cursor: pointer;
   border-color: $text-color;
@@ -27,6 +27,7 @@
 //country name style
 .country {
   padding: 5px;
+  color: black;
 }
 .country-dropdown:hover .country-dropdown-list {
   display: grid;
@@ -39,6 +40,12 @@
 }
 .total-dropdown-button {
   margin: 0 10px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: $box-shadow;
+  color: $text-color;
+  // background: $primary-color;
+  @include button-color;
   height: 40px;
   width: 70px;
 }
@@ -48,10 +55,15 @@
   left: 50px;
   display: none;
   padding: 10px;
-  color: $text-color;
-  background-color: $primary-color;
+  color: rgb(0, 0, 0);
+  @include button-color;
+  & hr {
+    background: $secondary-color;
+    height: 2px;
+    border: none;
+  }
 }
-.global-table-data{
+.global-table-data {
   padding: 10px;
 }
 .total-covid-status:hover .global-table-body {

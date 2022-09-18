@@ -7,7 +7,7 @@ import {
   removeWorldDataAsync,
 } from "../../features/world/WorldSlice";
 import Countrywise from "../countrywise/Countrywise";
-import Search from "./Search";
+import Header from "./Header";
 
 const WorldDetails = () => {
   //search state
@@ -26,7 +26,7 @@ const WorldDetails = () => {
   
   return (
     <div className="global">
-      <Search
+      <Header
         countryData={countryData}
         setSearch={setSearch}
         Global={worldData["Global"]}

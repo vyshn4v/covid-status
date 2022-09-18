@@ -1,9 +1,10 @@
 @import "../../common/colors.scss";
 .header {
   width: 100%;
-  background-color: $secondary-color;
+  background: rgb(0, 0, 75);
   position: fixed;
-  // z-index: 1;
+  color: $text-color;
+  z-index: 1;
   top: 0;
   padding: 10px 0 0 10px;
   height: 50px;
@@ -14,18 +15,22 @@
 .dropdown {
   position: relative;
   display: inline-block;
-  color: black;
+  &:hover .dropdown-content {
+    display: block;
+  }
 }
 //dropdown button category
 .dropdown-button {
   border-radius: 20px;
   color: $text-color;
-  background-color: $primary-color;
+  @include box-color;
   border: none;
-  box-shadow: $box-shadow;
+  // box-shadow: $box-shadow;
   width: 150px;
   height: 30px;
   margin-bottom: 5px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
 //drop down content india global category
@@ -35,18 +40,18 @@
     display: block;
     padding-top: 5px;
     font-size: 20px;
-    color: black;
+    color: $text-color;
+    &:hover {
+      @include button-color;
+      color: $text-color;
+      font-weight: 600;
+    }
   }
-  padding: 10px 8px 4px 8px;
+  overflow: hidden;
   display: none;
   position: absolute;
-  background-color: rgb(211, 211, 211);
-  box-shadow: $box-shadow;
+  @include box-color;
   border-radius: 20px;
   min-width: 150px;
   text-align: center;
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
 }

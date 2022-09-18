@@ -1,4 +1,6 @@
+@import "../src/common/colors.scss";
 .App {
-  color: white;
+  // color: $primary-color;
   min-width: max-content;
+  font-family: "Times New Roman", Times, serif;
 }

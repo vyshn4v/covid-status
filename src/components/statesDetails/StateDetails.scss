@@ -1,8 +1,11 @@
 @import "../../common/colors.scss";
+@import "../../common/fonts.scss";
 .statedetails-main {
   padding: 10px;
-  background-color: $secondary-color;
+  background: $primary-color;
   min-width: fit-content;
+  height: 100vh;
+  overflow-y: scroll;
 }
 .state-container {
   padding-top: 30px;
@@ -12,12 +15,12 @@
   grid-template-columns: auto auto auto auto auto;
 }
 .state-details {
-  background-color: $primary-color;
   border-radius: 20px;
+  color: $text-color;
+  @include box-color;
   text-align: center;
   width: 340px;
   padding: 10px;
-  box-shadow: $box-shadow;
   color: $text-color;
 }
 .state-name {
@@ -28,21 +31,19 @@
 .state-code {
   margin-top: 10px;
   h1 {
-    font-size: 14px;
+    font-size: $font-size;
   }
 }
-.StateDetails-button{
+.StateDetails-button {
   margin-top: 10px;
   width: 100px;
   height: 30px;
   border-radius: 20px;
   border: none;
-  color: $text-color;
   letter-spacing: 1px;
   font-weight: 600;
-  box-shadow: $box-shadow;
-  background-color: $primary-color;
-  // backdrop-filter: blur(10px);
+  @include button-color;
+  cursor: pointer;
 }
 
 @media (max-width: 1625px) {
@@ -55,13 +56,13 @@
     grid-template-columns: auto auto auto;
   }
 }
-@media (max-width:1100px) {
+@media (max-width: 1100px) {
   .state-container {
     grid-template-columns: auto auto;
   }
 }
 @media (max-width: 740px) {
   .state-container {
-    grid-template-columns: auto ;
+    grid-template-columns: auto;
   }
 }

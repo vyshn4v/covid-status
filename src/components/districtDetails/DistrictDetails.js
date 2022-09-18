@@ -18,7 +18,7 @@ const DistrictDetails = () => {
     dispatch(removeWorldWiseAsync());
   }, [dispatch, data]);
   return district.length !== 0 ? (
-    <>
+    <div className='district'>
       <div className="districtwise">
         <h3 className="green">green-less than 2000</h3>
         <h3 className="red">red-2000-4000</h3>
@@ -43,8 +43,6 @@ const DistrictDetails = () => {
               key={index}
               style={{
                 width: "18rem",
-                backgroundColor: `${ba}`,
-                color: `${ba === "#ebeb00" ? "black" : ""}`,
               }}
               className="district-status-box"
             >
@@ -54,12 +52,16 @@ const DistrictDetails = () => {
                 <h3>confirmed:{confirmed}</h3>
                 <h3>deceased:{deceased}</h3>
                 <h3>recovered:{recovered}</h3>
+                <div
+                  className="district-status-color"
+                  style={{ backgroundColor: `${ba}` }}
+                ></div>
               </div>
             </div>
           );
         })}
       </div>
-    </>
+    </div>
   ) : (
     <Loading />
   );

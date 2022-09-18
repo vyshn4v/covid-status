@@ -1,7 +1,6 @@
 @import "../../common/colors.scss";
 .country-details {
   color: $text-color;
-  background-color: $primary-color;
   padding: 20px;
   border: 1px solid $text-color;
 }
@@ -50,7 +49,7 @@
 }
 @media (max-width: 530px) {
   .country-table-body {
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto auto;
   }
   .country-table-image {
     grid-row: 1/7;

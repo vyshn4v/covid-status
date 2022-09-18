@@ -1,6 +1,10 @@
 @import "../../common/colors.scss";
+.district {
+  background: $primary-color;
+  height: 100vh;
+  overflow-y: auto;
+}
 .districtwise {
-  background-color: $primary-color;
   font-size: 20px;
   padding: 20px 0 0 20px;
   margin-top: 40px;
@@ -8,7 +12,7 @@
   color: white;
   display: flex;
   .green {
-    background-color: green;
+    background: green;
     width: max-content;
     box-shadow: $box-shadow;
     margin: 4px;
@@ -16,7 +20,7 @@
     padding: 4px;
   }
   .red {
-    background-color: #890000;
+    background: #890000;
     width: max-content;
     box-shadow: $box-shadow;
     margin: 4px;
@@ -24,7 +28,7 @@
     padding: 4px;
   }
   .yellow {
-    background-color: #ebeb00;
+    background: #ebeb00;
     color: rgb(0, 0, 0);
     width: max-content;
     box-shadow: $box-shadow;
@@ -40,17 +44,19 @@
   grid-gap: 10px;
   grid-template-columns: auto auto auto auto auto;
   color: black;
-  background-color: $primary-color;
-  min-height: 94.7vh;
   justify-content: space-evenly;
 }
 .district-status-box {
   border-radius: 20px;
   padding: 10px;
-  color: white;
+  color: $text-color;
   min-height: 12em;
   height: min-content;
-  box-shadow: $box-shadow;
+  @include box-color;
+  // box-shadow: $box-shadow;
+}
+.district-status-color {
+  height: 50px;
 }
 @media (max-width: 1625px) {
   .district-details {
